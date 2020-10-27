@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+body{
+background-color :#42325e;}
+h1{
+font-family:Poppins;
+text-align : center;
+color:#f0ea84;
+}
+
+p{
+font-family: Helvetica;
+}
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  box-sizing: border-box;
+  font-family:helvetica;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color:#42325e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-family:Poppins;
+}
+
+input[type=submit]:hover {
+  background-color:#f0ea84;
+  font-family:Poppins;
+  color:#42325e;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #a88db3;
+  padding: 50px 100px 100px 100px ;
+  font-family:Poppins; 
+}
+
+option{
+font-family:helvetica;
+}
+
+</style>
+<body>
+
+<h1>Daftar Jadi Member Outer Space</h1>
+
+<div>
+  <form action="/action_page.php">
+    <label for="fname">Nama</label>
+    <input type="text" id="fname" name="firstname" placeholder="Masukkan Nama Kamu">
+
+    
+    <label for="country">Mau Bergabung di Planet Apa?</label>
+    <select id="country" name="country">
+      <option value="australia">Mars</option>
+      <option value="canada">Venus</option>
+      <option value="usa">Bumi</option>
+      <option value="usa">Saturnus</option>
+      <option value="usa">Planet lain...</option>
+    </select>
+    
+    <label for="lname">Alasan Bergabung?</label>
+    <input type="text" id="lname" name="lastname" placeholder="Aku ingin bergabung karena...">
+
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<html>
+<head>
+
+<title>MyForm</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-a11y="true"></script>
+<!-----------------------SCRIPT FORM----------------------------->
+<script>
+    $(document).ready(function() {
+$('.error').hide();
+$('.submit').click(function(event){
+var data=$('.infobox').val();
+if(validate_phoneno(data))
+{
+$('.error').hide();
+}
+else
+{
+$('.error').show();
+event.preventDefault();
+}
+});
+});
+function validate_phoneno(ph)
+{
+var pattern=new RegExp(/^[0-9-+]+$/);
+return pattern.test(ph);
+}
+</script>
+<style>
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    color : #245a28;
+}
+
+p{
+    font-family:'Raleway';
+    font-size: 12px;
+}
+
+.outer-style{
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+} 
+
+.label {
+    width: 200px;
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: bolder;
+    color : #245a28;
+    text-align: center;
+    
+}
+.infobox {
+    margin-top : 15px;
+    width: 200px;
+    border-radius: 5px;
+    }
+
+.error { 
+    color: #570808;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 12px;
+    }
+
+.submit { 
+    margin-top: 15px;
+    width: 200px;
+    height : 30px;
+    font-family: 'Raleway';
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }
+
+.submit1{
+    background-color: #57c760; 
+    color:#ffffff;
+    border-color: #57c760;
+}
+.submit1:hover{
+    background-color: #245a28;
+    color: white;
+    border-color: #245a28;
+}
+
+.kotak-form {
+    background-color: #ffffff;
+}
+
+.hiasan-form{
+    background-color: #57c760;
+    text-align: center;
+
+}
+
+.col-sm-7{
+    height: 400px;
+}
+
+.col-sm-5{
+    height : 400px;
+}
+
+
+
+.align-center{
+    text-align: center;
+}
+
+.ver-hor-center{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+
+.dot {
+  height: 225px;
+  width: 225px;
+  background-color:  #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+</style>
+
+</head>
+
+<body>
+    <h1>Phone Number</h1>
+    <div class="container-fluid outer-style">
+
+        <div class="row">
+            <div class="col-sm-5 hiasan-form">
+                <span class="dot ver-hor-center">
+                    <i class="fas fa-phone ver-hor-center fa-8x" style="color:#57c760;"></i>
+                </span>
+            </div> 
+
+            <div class="col-sm-7 kotak-form">
+                <form id="signup" method="post" action="">
+                <div class="ver-hor-center">
+                        <span class="label">Masukkan Nomor HP anda</span>
+                        <p></p>
+                        <p></p>
+                        <input type="text" class="infobox" name="phone"/>
+                        <p></p>
+                        <span class="error">
+                        Nomor HP tidak valid!
+                        <p></p>
+                        (Hanya masukkan angka atau tanda + - saja )
+                        </span>
+                        <p></p>
+                        <input class="submit submit1" type="submit" value="Submit">
+    
+                </div>
+            </form>  
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    </body>
+
+</html>

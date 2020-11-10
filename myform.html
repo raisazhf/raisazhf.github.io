@@ -9,7 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-a11y="true"></script>
-<!-----------------------SCRIPT FORM VALIDASI NOMOR TELFON----------------------------->
+
+
+<!-----------------------SCRIPT JQUERY FORM VALIDASI NOMOR TELFON----------------------------->
 <script>
     $(document).ready(function() { //fungsi yang berjalan saat memuat web
         $('.error').hide(); //menyembunyikan pesan error
@@ -33,7 +35,7 @@
     }
 </script>
 
-<!-------------------------------------------------STYLING ELEMENT---------------------------------------------------------->
+<!-------------------------------------------------STYLING ELEMENT (css)---------------------------------------------------------->
 <style>
 
 h1 {
@@ -143,34 +145,41 @@ p{
 
 </style>
 
-<!------------------------------------------------HTML---------------------------------------------------->
-</head>
 
+</head>
+<!--------------------------------------------Pemanggilan fungsi dengan html, membuat tampilan form dalam container bootstrap---------------------------------->
 <body>
     <h1>Phone Number</h1>
-    <div class="container-fluid outer-style">
 
+<!-----------------------------------membuat container------------------------------------------------------------------->
+    <div class="container-fluid outer-style">
+        <!------------------------------Kolom kiri, logo telefon (untuk estetika)----------------------------------------->
         <div class="row">
             <div class="col-sm-5 hiasan-form">
                 <span class="dot ver-hor-center">
                     <i class="fas fa-phone ver-hor-center fa-8x" style="color:#57c760;"></i>
                 </span>
             </div> 
-
+        <!-------------------------------Kolom kanan, berisi form--------------------------------------------------------------->
             <div class="col-sm-7 kotak-form">
+                <!-------------------deklarasi untuk membuat form-------------------------->
                 <form id="signup" method="post" action="">
                 <div class="ver-hor-center">
+                        <!---------------------------Label Form-------------------------->
                         <span class="label">Masukkan Nomor HP anda</span>
                         <p></p>
                         <p></p>
+                        <!----------------------infobox yang dapat digunakan untuk menginput data pada form-------------------->
                         <input type="text" class="infobox" name="phone"/>
                         <p></p>
+                        <!-----------------------pesan error yang ditampilkan jika data tidak valid------------------------>
                         <span class="error">
                         Nomor HP tidak valid!
                         <p></p>
                         (Hanya masukkan angka atau tanda + - saja )
                         </span>
                         <p></p>
+                        <!---------------------------------Tombol untuk mengirimkan form (tombol submit)---------------------->
                         <input class="submit submit1" type="submit" value="Submit">
     
                 </div>
@@ -178,9 +187,6 @@ p{
             </div>
         </div>
     </div>
-    
-    
-
 
     </body>
 

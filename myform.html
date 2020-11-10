@@ -1,35 +1,39 @@
 <html>
 <head>
 
-<title>MyForm</title>
+<title>Form Nomor Telfon</title>
+
+<!------------------------------SCRIPT DAN LINK FONT, JQUERY, BOOTSTRAP DAN FONTAWESOME--------------------------------------->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-a11y="true"></script>
-<!-----------------------SCRIPT FORM----------------------------->
+<!-----------------------SCRIPT FORM VALIDASI NOMOR TELFON----------------------------->
 <script>
-    $(document).ready(function() {
-$('.error').hide();
-$('.submit').click(function(event){
-var data=$('.infobox').val();
-if(validate_phoneno(data))
-{
-$('.error').hide();
-}
-else
-{
-$('.error').show();
-event.preventDefault();
-}
-});
-});
-function validate_phoneno(ph)
-{
-var pattern=new RegExp(/^[0-9-+]+$/);
-return pattern.test(ph);
-}
+    $(document).ready(function() { //fungsi yang berjalan saat memuat web
+        $('.error').hide(); //menyembunyikan pesan error
+        $('.submit').click(function(event){ //menjalankan suatu event saat tombol submit diklik
+            var data=$('.infobox').val(); //mengatur nilai pada infobox sesuai yang diinputkan
+            if(validate_phoneno(data)) //memvalidasi data yang masuk
+        {
+            $('.error').hide(); //jika nomor telfon valid, pesan error disembunyikan
+        }
+        else
+        {
+            $('.error').show(); //menampilkan pesan error jika nomer telfon tidak valid
+            event.preventDefault(); //menghentikan tindakan default dari elemen yang dipilih untuk terjadi.
+        }
+        });
+    });
+    function validate_phoneno(ph) //fungsi untuk memvalidasi data yang diinputkan
+    {   
+        var pattern=new RegExp(/^[0-9-+]+$/); //menentukan nilai data apa saja yang dianggap valid
+        return pattern.test(ph); //memeriksa apakah data sudah sesuai atau belum
+    }
 </script>
+
+<!-------------------------------------------------STYLING ELEMENT---------------------------------------------------------->
 <style>
 
 h1 {
@@ -139,6 +143,7 @@ p{
 
 </style>
 
+<!------------------------------------------------HTML---------------------------------------------------->
 </head>
 
 <body>
